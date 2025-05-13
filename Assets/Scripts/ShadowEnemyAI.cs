@@ -14,6 +14,10 @@ public class ShadowEnemyAI : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+
+        if (player == null) {
+            player = FindFirstObjectByType<PlayerMovement>().gameObject.transform;
+        }
     }
 
     void Update()
