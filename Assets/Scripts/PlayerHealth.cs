@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         UpdateHearts();
         PlayerHealth.IsDead = false;
+        LightMeter.isInSafeZone = true;
     }
 
     public void TakeDamage(int damage)

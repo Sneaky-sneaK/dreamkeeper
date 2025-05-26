@@ -45,8 +45,20 @@ public class ShadowEnemyAI : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
 
+        bool playerIsInSafeZone = LightMeter.isInSafeZone;
+
+        if (playerIsInSafeZone)
+        {
+            // Player is safe – stop chasing
+            if (currentState != EnemyState.Idle && currentState != EnemyState.Wander)
+            {
+                currentState = EnemyState.Idle;
+                return;
+            }
+        }
+
         // If not already attacking or cooling down and player gets close, start chasing
-        if (currentState != EnemyState.Chase && currentState != EnemyState.Attack && currentState != EnemyState.Cooldown)
+        else if (currentState != EnemyState.Chase && currentState != EnemyState.Attack && currentState != EnemyState.Cooldown)
         {
             if (distance <= distanceToChasePlayer)
             {
@@ -178,6 +190,15 @@ public class ShadowEnemyAI : MonoBehaviour
         {
             TakeDamage(1);
             Destroy(collision.gameObject); // Destroy the bullet on impact
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("SafeZone"))
+        {
+            // Stop Chasing and do not enter
+            currentState = EnemyState.Wander;
         }
     }
 

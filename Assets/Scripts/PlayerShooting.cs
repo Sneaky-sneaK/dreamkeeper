@@ -9,6 +9,8 @@ public class Playershooting : MonoBehaviour
 
     void Update()
     {
+        if (PlayerHealth.IsDead || LightMeter.isInSafeZone) return;
+
         if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
