@@ -6,6 +6,7 @@ public class ShadowEnemyAI : MonoBehaviour
     public float moveSpeed = 3f;
     public float stopDistance = 1.5f;
     public bool facePlayer = true;
+    public float distanceToChasePlayer = 20;
 
     [Header("Health Settings")]
     public int maxHealth = 3;
@@ -25,6 +26,12 @@ public class ShadowEnemyAI : MonoBehaviour
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
+
+        if (distance > distanceToChasePlayer)
+        {
+            // Enemy is idling
+            return;
+        }
 
         if (distance > stopDistance)
         {

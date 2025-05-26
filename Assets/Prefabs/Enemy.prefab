@@ -153,4 +153,5 @@ MonoBehaviour:
   moveSpeed: 4
   stopDistance: 2
   facePlayer: 1
+  distanceToChasePlayer: 10
   maxHealth: 3
