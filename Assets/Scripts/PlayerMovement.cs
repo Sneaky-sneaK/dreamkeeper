@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveInput;
     private Rigidbody rb;
     public Transform weapon;
+    public GameObject playerLightWeapon;
 
     void Start()
     {
@@ -43,5 +44,9 @@ public class PlayerMovement : MonoBehaviour
 
         var newPosition = rb.position + moveSpeed * Time.fixedDeltaTime * moveInput;
         rb.MovePosition(newPosition);
+    }
+
+    public void EnableLightWeapon(bool enable) {
+        playerLightWeapon.SetActive(enable);
     }
 }

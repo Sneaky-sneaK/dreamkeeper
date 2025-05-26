@@ -8,6 +8,7 @@ public class SafeZoneTrigger : MonoBehaviour
         {
             Debug.Log("Entered Safe Zone");
             LightMeter.SetInSafeZone(true);
+            FindAnyObjectByType<PlayerMovement>().EnableLightWeapon(true);
         }
     }
 

@@ -11,6 +11,17 @@ public class LightMeter : MonoBehaviour
     public float refillRate = 10f;    // How fast light refills in safe zone
 
     public static bool isInSafeZone = false;
+    public float LightRemaining
+    {
+        get
+        {
+            return currentLight;
+        }
+    }
+
+    public void UseLight(float value) {
+        currentLight -= value;
+    }
 
     void Start()
     {
@@ -35,8 +46,8 @@ public class LightMeter : MonoBehaviour
 
         if (currentLight <= 0f)
         {
-            Debug.Log("Player consumed by darkness!");
-            // You could call a death function here if you want
+            // Turn off player light
+            FindAnyObjectByType<PlayerMovement>().EnableLightWeapon(false);
         }
     }
 
