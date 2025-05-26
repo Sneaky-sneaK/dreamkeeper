@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ShadowEnemyAI : MonoBehaviour
 {
-    private enum EnemyState { Idle, Wander, Chase }
+    private enum EnemyState { Idle, Wander, Chase, Attack, Cooldown }
     private EnemyState currentState = EnemyState.Idle;
 
     private float stateTimer = 0f;
@@ -16,6 +16,14 @@ public class ShadowEnemyAI : MonoBehaviour
     public float stopDistance = 1.5f;
     public bool facePlayer = true;
     public float distanceToChasePlayer = 20;
+
+    [Header("Attacking")]
+    public float attackCooldown = 2f;
+    private float cooldownTimer = 0f;
+    public float attackRange = 1.5f; // How close enemy must be to attack
+    public int damage = 1; // How much damage enemy does
+    private bool hasAttacked = false;
+
 
     [Header("Health Settings")]
     public int maxHealth = 3;
@@ -36,30 +44,81 @@ public class ShadowEnemyAI : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance <= distanceToChasePlayer && currentState != EnemyState.Chase)
+        // If not already attacking or cooling down and player gets close, start chasing
+        if (currentState != EnemyState.Chase && currentState != EnemyState.Attack && currentState != EnemyState.Cooldown)
         {
-            // Switch to chase
-            currentState = EnemyState.Chase;
-        }
-        else if (distance > distanceToChasePlayer && currentState == EnemyState.Chase)
-        {
-            // If player is out of range, go back to wandering
-            PickNextState();
+            if (distance <= distanceToChasePlayer)
+            {
+                currentState = EnemyState.Chase;
+            }
         }
 
         switch (currentState)
         {
             case EnemyState.Chase:
-                ChasePlayer();
+                if (distance <= attackRange)
+                {
+                    currentState = EnemyState.Attack;
+                }
+                else if (distance > distanceToChasePlayer)
+                {
+                    PickNextState(); // Player got away
+                }
+                else
+                {
+                    ChasePlayer();
+                }
                 break;
+
+            case EnemyState.Attack:
+                if (!hasAttacked)
+                {
+                    AttackPlayer();
+                }
+                break;
+
+            case EnemyState.Cooldown:
+                cooldownTimer -= Time.deltaTime;
+                if (cooldownTimer <= 0f)
+                {
+                    PickNextState(); // Return to Idle or Wander
+                }
+                break;
+
             case EnemyState.Wander:
                 Wander();
                 break;
+
             case EnemyState.Idle:
                 Idle();
                 break;
         }
     }
+
+    void AttackPlayer()
+    {
+        hasAttacked = true;
+
+        // Damage the player if in range
+        float distance = Vector3.Distance(transform.position, player.position);
+        if (distance <= attackRange)
+        {
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
+        }
+
+        // After attacking, enter cooldown state
+        currentState = EnemyState.Cooldown;
+        cooldownTimer = attackCooldown;
+        hasAttacked = false;
+
+        Debug.Log("Enemy attacked and is cooling down.");
+    }
+
+
 
     void ChasePlayer()
     {

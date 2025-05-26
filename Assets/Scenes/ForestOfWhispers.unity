@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -363,6 +367,10 @@ PrefabInstance:
     - target: {fileID: 536640600700920443, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: attackRange
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1506,6 +1514,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1590,6 +1602,7 @@ GameObject:
   - component: {fileID: 1875048954}
   - component: {fileID: 1875048959}
   - component: {fileID: 1875048960}
+  - component: {fileID: 1875048961}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1732,6 +1745,25 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1875048961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875048953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120ad8ba127951c40ac226a3f5e5f217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  hearts:
+  - {fileID: 1051575420}
+  - {fileID: 618710410}
+  - {fileID: 386728030}
+  fullColor: {r: 1, g: 1, b: 1, a: 1}
+  emptyColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
 --- !u!1 &1901873710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +1929,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1875048958}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8391997849530336213, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1962,6 +1998,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1875048958}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8391997849530336213, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
