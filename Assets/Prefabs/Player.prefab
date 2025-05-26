@@ -354,7 +354,7 @@ MonoBehaviour:
   lightSlider: {fileID: 0}
   maxLight: 100
   currentLight: 100
-  drainRate: 2.5
+  drainRate: 2
   refillRate: 25
 --- !u!1 &7026790706158502157
 GameObject:
@@ -458,3 +458,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6792541507277321977, guid: 0d4306316d0ed0e4c80d51ca9e65431f, type: 3}
   firePoint: {fileID: 669712913933841826}
   bulletSpeed: 20
+  lightToUseWhenFiring: 3

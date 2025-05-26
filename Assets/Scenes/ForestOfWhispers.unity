@@ -197,7 +197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &60519913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2748,10 +2748,6 @@ PrefabInstance:
     - target: {fileID: 2711070870337072281, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6067845263151994607, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
-      propertyPath: drainRate
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6067845263151994607, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
       propertyPath: lightSlider
