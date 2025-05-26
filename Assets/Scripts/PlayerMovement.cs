@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (PlayerHealth.IsDead) return;
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");
         moveInput = new Vector3(moveX, 0f, moveZ).normalized;
@@ -36,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (PlayerHealth.IsDead) return;
+
         var newPosition = rb.position + moveSpeed * Time.fixedDeltaTime * moveInput;
         rb.MovePosition(newPosition);
     }

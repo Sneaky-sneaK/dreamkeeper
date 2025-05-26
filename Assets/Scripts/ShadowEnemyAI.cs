@@ -41,6 +41,7 @@ public class ShadowEnemyAI : MonoBehaviour
     void Update()
     {
         if (player == null) return;
+        if (PlayerHealth.IsDead) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
 

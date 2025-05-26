@@ -8,6 +8,8 @@ public class WeaponFire : MonoBehaviour
 
     void Update()
     {
+        if (PlayerHealth.IsDead) return;
+
         if (Input.GetMouseButtonDown(0)) // Left mouse click
         {
             FireBullet();

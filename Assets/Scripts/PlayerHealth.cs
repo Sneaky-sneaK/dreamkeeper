@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -10,10 +11,14 @@ public class PlayerHealth : MonoBehaviour
     public Color fullColor = Color.white;
     public Color emptyColor = new Color(0.5f, 0.5f, 0.5f, 0.5f); // Grey + semi-transparent
 
+    public GameObject deathScreen; // Drag your DeathScreen panel into this field in the Inspector
+    public static bool IsDead;
+
     void Start()
     {
         currentHealth = maxHealth;
         UpdateHearts();
+        PlayerHealth.IsDead = false;
     }
 
     public void TakeDamage(int damage)
@@ -46,7 +51,13 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
+        PlayerHealth.IsDead = true;
         Debug.Log("Player has died.");
-        // Implement death behavior here (e.g., disable player, load game over screen)
+        deathScreen.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
