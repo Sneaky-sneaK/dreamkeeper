@@ -24,10 +24,11 @@ public class ShadowEnemyAI : MonoBehaviour
     public int damage = 1; // How much damage enemy does
     private bool hasAttacked = false;
 
-
     [Header("Health Settings")]
     public int maxHealth = 3;
     private int currentHealth;
+
+    public EnemySpawnManager spawner;
 
     private void Start()
     {
@@ -36,6 +37,8 @@ public class ShadowEnemyAI : MonoBehaviour
         if (player == null) {
             player = FindFirstObjectByType<PlayerMovement>().gameObject.transform;
         }
+
+        spawner = FindFirstObjectByType<EnemySpawnManager>();
     }
 
     void Update()
@@ -216,6 +219,7 @@ public class ShadowEnemyAI : MonoBehaviour
     private void Die()
     {
         Debug.Log("Enemy died!");
+        spawner?.OnEnemyDeath(gameObject);
         Destroy(gameObject); // You can replace this with a death animation/effect
     }
 }
