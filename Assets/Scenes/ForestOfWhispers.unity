@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.078
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0.2603773, g: 0.2603773, b: 0.2603773, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -2777,10 +2777,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3177975167660957282, guid: db66d132d1c081244a1c4b29923c5c12, type: 3}
-      propertyPath: m_Name
-      value: Enemy Variant (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2935785060360607444, guid: db66d132d1c081244a1c4b29923c5c12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.1
@@ -2820,6 +2816,10 @@ PrefabInstance:
     - target: {fileID: 2935785060360607444, guid: db66d132d1c081244a1c4b29923c5c12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177975167660957282, guid: db66d132d1c081244a1c4b29923c5c12, type: 3}
+      propertyPath: m_Name
+      value: Enemy Variant (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

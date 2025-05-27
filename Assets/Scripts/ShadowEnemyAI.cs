@@ -153,6 +153,11 @@ public class ShadowEnemyAI : MonoBehaviour
     void Wander()
     {
         transform.position += wanderDirection * moveSpeed * Time.deltaTime;
+        if (wanderDirection != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(wanderDirection, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+        }
 
         stateTimer -= Time.deltaTime;
         if (stateTimer <= 0f)
