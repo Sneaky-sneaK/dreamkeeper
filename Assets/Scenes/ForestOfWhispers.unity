@@ -4034,10 +4034,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5261514458713839354, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.036
-      objectReference: {fileID: 0}
     - target: {fileID: 6067845263151994607, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
       propertyPath: lightSlider
       value: 
@@ -4081,22 +4077,6 @@ PrefabInstance:
     - target: {fileID: 6834434659823706803, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111690906893316637, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
-      propertyPath: m_Height
-      value: 3.037868
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111690906893316637, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
-      propertyPath: m_Radius
-      value: 0.62954617
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111690906893316637, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
-      propertyPath: m_Center.y
-      value: 0.518934
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111690906893316637, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
-      propertyPath: m_Center.z
-      value: 0.12954618
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

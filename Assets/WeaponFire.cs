@@ -28,13 +28,7 @@ public class WeaponFire : MonoBehaviour
     {
         // Create bullet at firePoint position and rotation
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
-        // Apply velocity to the bullet
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.linearVelocity = firePoint.forward * bulletSpeed;
-        }
+        bullet.GetComponent<Projectile>().speed = bulletSpeed;
 
         lightMeter.UseLight(lightToUseWhenFiring);
     }

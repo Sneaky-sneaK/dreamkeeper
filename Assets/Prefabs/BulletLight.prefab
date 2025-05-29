@@ -109,8 +109,8 @@ GameObject:
   - component: {fileID: 1645830960399285524}
   - component: {fileID: 1270800119642786094}
   - component: {fileID: 6987881550695643369}
-  - component: {fileID: -325120028094867442}
   - component: {fileID: 5050100557446702251}
+  - component: {fileID: 6721063296441785685}
   m_Layer: 0
   m_Name: BulletLight
   m_TagString: Bullet
@@ -208,19 +208,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-325120028094867442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792541507277321977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f06bcd5bd32aaf4e8e79f2dd63bd215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!114 &5050100557446702251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,3 +221,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 1.5
+--- !u!114 &6721063296441785685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6792541507277321977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f06bcd5bd32aaf4e8e79f2dd63bd215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
