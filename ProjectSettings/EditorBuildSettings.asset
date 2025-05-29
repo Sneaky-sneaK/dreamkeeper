@@ -16,11 +16,14 @@ EditorBuildSettings:
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/RuinedPlayground.unity
-    guid: 184bdfe9f408ae745b8ce7dacb3707c7
+    guid: 000c0d05c351cbd45b026b4029ce628f
   - enabled: 1
+    path: Assets/Scenes/NightmareRealm.unity
+    guid: 39fc90edb9d6d054ba1fd87915a2cce7
+  - enabled: 0
     path: Assets/Scenes/NightmareRelm.unity
     guid: 8466bacbd9969114183d75b11418eaf8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StoryScene.unity
     guid: 4a993c1b9116be94ba20c0a0818d226e
   m_configObjects:
