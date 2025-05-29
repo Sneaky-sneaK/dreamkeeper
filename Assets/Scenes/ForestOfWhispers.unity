@@ -4034,6 +4034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5261514458713839354, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.036
+      objectReference: {fileID: 0}
     - target: {fileID: 6067845263151994607, guid: eb68f48bcbadf6a47bbd56c0fc7c9d00, type: 3}
       propertyPath: lightSlider
       value: 
