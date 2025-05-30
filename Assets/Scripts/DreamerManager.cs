@@ -14,7 +14,11 @@ public class DreamerManager : MonoBehaviour
 	private int totalDreamers;
 	private int collectedDreamers;
 
-	private void Awake()
+    public AudioClip collectSound;
+    private AudioSource audioSource;
+
+
+    private void Awake()
 	{
 		if (Instance == null) Instance = this;
 		else Destroy(gameObject);
@@ -25,12 +29,17 @@ public class DreamerManager : MonoBehaviour
 		// Count all Dreamers in the scene at start
 		totalDreamers = FindObjectsByType<Dreamer>(FindObjectsSortMode.None).Length;
 		UpdateUI();
-	}
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = collectSound;
+    }
 
 	public void CollectDreamer(Dreamer dreamer)
 	{
 		collectedDreamers++;
-		UpdateUI();
+        audioSource.Play();
+        UpdateUI();
+
 
 		if (collectedDreamers >= totalDreamers)
 		{

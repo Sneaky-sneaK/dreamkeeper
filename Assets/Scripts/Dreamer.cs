@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Dreamer : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
