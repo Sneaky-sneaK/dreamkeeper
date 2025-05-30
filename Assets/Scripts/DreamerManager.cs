@@ -59,7 +59,13 @@ public class DreamerManager : MonoBehaviour
         levelCompleteUI.SetActive(true);
 	}
 
-	public void GoToNextLevel(string levelName) {
-        SceneManager.LoadScene(levelName);
-    }
+	public void GoToNextLevel(string levelName)
+	{
+		SceneManager.LoadScene(levelName);
+	}
+
+	public void QuitGame() {
+		Debug.Log("Quitting Game");
+		Application.Quit();
+	}
 }
