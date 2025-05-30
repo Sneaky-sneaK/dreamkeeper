@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8761162059443233475
+--- !u!1001 &3128005421795982361
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 276664263535520461, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 276664263535520461, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 276664263535520461, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 276664263535520461, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.435631
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 276664263535520461, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 276664263535520461, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.6363053
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 276664263535520461, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -58,32 +62,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 536640600700920443, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_Name
-      value: EnemyBoss Variant
+      value: Enemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: moveSpeed
-      value: 7
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: attackRange
-      value: 2.5
+      value: 1.25
       objectReference: {fileID: 0}
-    - target: {fileID: 4168928736362325360, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: stopDistance
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4168928736362325360, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: attackCooldown
+      value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4168928736362325360, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: distanceToChasePlayer
+      value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 8391997849530336213, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

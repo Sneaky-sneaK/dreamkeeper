@@ -13,6 +13,18 @@ PrefabInstance:
       value: Fern3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 844781fe3db822648b51a53b3ac4cf6d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 844781fe3db822648b51a53b3ac4cf6d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 844781fe3db822648b51a53b3ac4cf6d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 844781fe3db822648b51a53b3ac4cf6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
