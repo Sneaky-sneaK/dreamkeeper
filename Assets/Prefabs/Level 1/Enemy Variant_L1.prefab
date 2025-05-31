@@ -62,11 +62,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 536640600700920443, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_Name
-      value: Enemy Variant
+      value: Enemy Variant_L1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: moveSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: attackRange
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: distanceToChasePlayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8391997849530336213, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

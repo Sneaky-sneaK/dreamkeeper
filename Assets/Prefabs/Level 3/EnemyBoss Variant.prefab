@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: attackRange
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2028399792285807489, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
+      propertyPath: distanceToChasePlayer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4168928736362325360, guid: 4c16a562b3b58a34683f5fc8dbb126db, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
