@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ShadowEnemyAI : MonoBehaviour
 {
+
     private enum EnemyState { Idle, Wander, Chase, Attack, Cooldown }
     private EnemyState currentState = EnemyState.Idle;
 

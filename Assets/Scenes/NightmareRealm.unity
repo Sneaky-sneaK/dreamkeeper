@@ -6419,6 +6419,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1446321140}
     m_Modifications:
+    - target: {fileID: 1359228074016750034, guid: 9061f066e1d16854685d4736a6108032, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2935785060360607444, guid: 9061f066e1d16854685d4736a6108032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.24
